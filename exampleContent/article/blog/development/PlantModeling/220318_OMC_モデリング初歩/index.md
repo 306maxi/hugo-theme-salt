@@ -3,9 +3,8 @@ date: 2022-03-18
 title: "Modelicaのサンプルモデルを使ってみるための手順"
 linkTitle: "ModelcaSampleModel"
 description: "バッテリセルシミュレーション"
-categories:
-- Development
-- MBD
+categories: "Development"
+pickups: ["MBD"]
 tags:
 - OpenModelica
 marp: true

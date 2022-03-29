@@ -1,7 +1,7 @@
 baseURL: https://306maxi.github.io/hugo-theme-salt/
 languageCode: ja
 # theme: hugo-theme-salt
-title: Hugoブログ
+title: Hugo
 copyright: © 2022 
 author:
   name: my_name
@@ -89,10 +89,10 @@ menu:
       url: /About
       weight: -100
     - name: Blog
-      url: /categories/サンプル
+      url: /categories/Development
       weight: -90
-    - name: Usage
-      url: /tags/Hugo
+    - name: Tips
+      url: /tags/tips
       weight: -80
     - name: Go言語
       url: /categories/Go言語
@@ -106,8 +106,8 @@ menu:
       url: /tags/Hugo
       pre: <i class="fa-2x fas fa-cog"></i>
       weight: -90
-    - name: Go言語
-      url: /categories/Go言語
+    - name: Development
+      url: /categories/Development
       pre: <i class="fa-2x fas fa-laptop-code"></i>
       weight: -80
     - name: Tips

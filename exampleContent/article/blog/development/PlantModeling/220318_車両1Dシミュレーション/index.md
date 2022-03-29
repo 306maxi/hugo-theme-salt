@@ -3,15 +3,11 @@ date: 2022-03-18
 title: "車両1Dシミュレーション"
 linkTitle: "Vehicle 1DSimulation"
 description: "EMOTHモデル"
-categories:
-- Development
-- Enveronment
-- MBD
+categories: "Development"
+pickups: ["MBD"]
 tags:
 - OpenModelica
-- Linux
-- WSL
-- Docker
+- 1D-CAE
 marp: true
 theme: slide_style
 size: 16:9

@@ -3,15 +3,14 @@ date: 2022-03-11
 title: "OpenModlicaの導入手順"
 linkTitle: "OpenModelica"
 description: "Modelica言語を用いて"
-categories:
-- Development
-- Enveronment
-- MBD
+categories: "Development"
+pickups: ["MBD"]
 tags:
 - OpenModelica
 - Linux
 - WSL
 - Docker
+
 marp: true
 theme: slide_style
 size: 16:9
