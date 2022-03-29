@@ -25,13 +25,17 @@ footer: (C)2022 PUES Corp.
 ---
 
 # OpenModelica
+
 ### 目的
+
 - 非因果モデリング言語として一般的なModelica言語を使用する環境として，OSSでは[OpenModelica](https://www.openmodelica.org/)がある．他の選択肢として[JModelica](https://jmodelica.org//)があるが2019年から非公開プロジェクトになっている．  
 - SimscapeはMathworksが管理する非因果モデリング言語なので，Simulink環境で使用する際に利便性が高い反面，ドメインごとにライセンスが別れており，保有していないドメインはモデリングが困難であることと，Simulink環境に制限されるという課題がある．(例えば，機械学習用のプラットフォームはPythonが多い)
 - VectorのCANoe等もFMUをサポートしている
+- 
 ### ゴール
 
 ## 導入手順
+
 1. Windows向けのBuildがあるので入手してインストール
    - 執筆時点のStableBuildからv1.18.1-64bitを選択
 2. 起動時にロードするMSLライブラリのバージョン選択
@@ -40,6 +44,7 @@ footer: (C)2022 PUES Corp.
     3. MSLをロードしない。モデルまたはライブラリを開くと、開いているライブラリのuses()アノテーションに基づいて、適切なバージョンのMSLが自動的にロードされます。このオプションは、MSL v3.2.3を使っているプロジェクトとMSL v4.0.0を使っているプロジェクトとで異なる作業を行う場合にお勧めします。また、Modelica標準ライブラリの開発者であり、OpenModelica用にカスタマイズしたプレインストールバージョンではなく、独自の変更バージョンをロードする場合にもお勧めします。
 
 ## モデリング
+
 - MSLをロードしない設定としたので，`C:\Program Files\OpenModelica1.18.1-64bit\lib\omlibrary`からライブラリを選択する
 
 ![bg 80% vertical right](2022-03-11-11-47-49.png)

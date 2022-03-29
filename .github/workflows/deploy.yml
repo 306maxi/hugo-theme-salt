@@ -31,7 +31,7 @@ jobs:
 
     - name: Build
       run: |
-        echo 'hugo-theme-salt.okdyy75.com' > static/CNAME
+        echo '306maxi.github.io/hugo-theme-salt' > static/CNAME
         mv exampleContent content
         mv config.org.yml config.yml
         sed -ie "s|my_name|okdyy75|" config.yml
