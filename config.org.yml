@@ -72,6 +72,7 @@ params:
   profile:
     name: ユーザー名
     description: プロフィール
+    icon: image/profile_icon.png
   publisher:
     type: Organization
     name: my_organization
@@ -132,8 +133,13 @@ menu:
       weight: -90
       params:
         position: left
+    - name: プライバシーポリシー
+      url: /privacy-policy
+      weight: -100
+      params:
+        position: right
     - name: お問い合わせ
-      url: 
+      url: https://github.com/okdyy75/hugo-theme-salt/issues
       weight: -90
       params:
         position: right
