@@ -1,0 +1,237 @@
+/* @theme slide_style
+*  @auto-scaling true
+*/
+
+@import 'gaia'; /* defaultテーマのCSSを継承 */
+
+:root {
+    --main-color: #09c;
+    --color-highlight: #f96;
+    --color-dimmed: #888;
+  }
+  section * {
+    line-height: 1.0em;
+  }
+  section {
+    width: 1920px;
+    height: 1080px;
+    font-size: 24px;
+  }
+
+  section.title {
+    --title-height: 130px;
+    --subtitle-height: 70px;
+
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr var(--title-height) var(--subtitle-height) 1fr;
+    grid-template-areas: "." "title" "subtitle" ".";
+  }
+
+  section.title h1,
+  section.title h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: var(--area-height);
+    line-height: var(--area-height);
+    font-size: calc(var(--area-height) * 0.7);
+
+    /*border: 1px dashed gray; /* debug */
+  }
+
+  section.title h1 {
+    grid-area: title;
+    color: slategray;
+    --area-height: var(--title-height);
+  }
+
+  section.title h2 {
+    grid-area: subtitle;
+    --area-height: var(--subtitle-height);
+  }
+  section.title header {
+    color: white; 
+    font-weight: 600;
+    font-size: 120%;
+    position: absolute;
+    top: 100px;
+    height: 60px;
+    left : 80px; 
+    right : 80px; 
+    background-color: var(--main-color);
+  }
+
+  section.title footer {
+    color: var(--main-color); 
+    font-weight: 600;
+    font-size: 100%;
+    position: absolute;
+    bottom: 20px;
+    height: 60px;
+    left : 80px; 
+    right : 80px; 
+  }
+
+  section.toc {
+    background: linear-gradient(to right, var(--main-color) 150px, #fff 0px);
+  }
+  section.toc h2 {
+    color: #fff; 
+    border:0;
+  }
+  section.toc a {
+    color: #000;
+  }
+  section.toc li {
+    font-size: 90%;
+  }
+  section.toc>ul {
+    list-style-type: none;
+    position: relative;
+    left: 90px;
+    overflow: hidden;
+  }
+  section.toc>ul ul {
+    list-style-type: decimal;
+  }
+  section.toc>ul ul>li {
+    width: 45%;
+    float:left;
+    clear:left;
+  }
+  section.toc>ul ul>li:nth-child(n+6) {
+    position:relative;
+    top: -11em;
+    left: 50%;
+  }
+  section.toc p {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    padding-top:20px;
+    font-size: 90%;
+    color: var(--main-color);
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin:10px auto;
+    width: 100%;
+    color: var(--main-color);
+  }
+  h2 {
+    display: inline-block;
+    margin:0px auto;
+    padding:10px;
+    width: 100%;
+    border-bottom: 2px solid #aaa;
+  }  
+  h3 {
+    font-size: 25px;
+    top: 2em;
+    margin:0px auto;
+    padding:10px;
+    border-left: 10px solid var(--main-color);
+  }
+  
+  code {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9em;
+    letter-spacing: 0;
+    margin: -0.1em 0.15em;
+    padding: 0.1em 0.2em;
+    vertical-align: baseline;
+    border-radius: 5px; /* 角丸 */
+    border: solid 1px #d6dde4; /* 枠線 */
+  }
+
+  pre {
+    display: block;
+    margin: 1em 0 0;
+    overflow: visible;
+  }
+  pre > code{
+    counter-reset: line-number;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.0em;
+    letter-spacing: 0;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    vertical-align: baseline;
+    border-radius: 10px; /* 角丸 */
+    border: solid 1px #d6dde4; /* 枠線 */
+  }
+  code > span {
+    counter-increment: line-number;
+    display: list-item;
+    padding-left: 2rem;
+    margin-left: 2rem;
+  }
+  code > span::marker {
+    content: counter(line-number);
+    color: #aaa;
+  }
+
+  blockquote {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    vertical-align: baseline;
+    border-radius: 10px; /* 角丸 */
+    background-color: #d6dde4;
+  }
+
+  table {
+    font-size: 20px;
+    margin:10px auto;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+    width: 90% auto;
+    display: table;
+  }
+
+  header,
+  footer {
+    position: absolute;
+    padding: 0px auto;
+    left: 40px;
+    right: 40px;
+    height: 40px;
+  }
+  
+  header
+  {
+    padding-top: 0px;
+    top: 0px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-color);
+  }
+
+  footer
+  {
+    bottom: 20px;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    color: #09c;
+  }
+  /* Add "Page" prefix and total page number */
+  section::after {
+    font-size: 10px;
+    font-weight: bold;
+    right: 20px;
+    color: #09c;
+
+    content: 'Page ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  }
