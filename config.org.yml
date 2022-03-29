@@ -1,8 +1,8 @@
 baseURL: https://306maxi.github.io/hugo-theme-salt/
 languageCode: ja
 # theme: hugo-theme-salt
-title: Hugoブログ」
-copyright: © 2021 
+title: Hugoブログ
+copyright: © 2022 
 author:
   name: my_name
   email: my_email@example.com
@@ -85,13 +85,13 @@ params:
 
 menu:
   header:
-    - name: Saltの使い方
-      url: /categories/Saltの使い方
+    - name: About
+      url: /About
       weight: -100
-    - name: サンプル
+    - name: Blog
       url: /categories/サンプル
       weight: -90
-    - name: Hugo
+    - name: Usage
       url: /tags/Hugo
       weight: -80
     - name: Go言語

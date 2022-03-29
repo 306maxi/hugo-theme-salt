@@ -2,7 +2,7 @@
     <div class="partials__sidebar">
         <div class="pcShow partials__sidebar__card">
             <h4 class="partials__sidebar__title">
-                検索
+                検索(調整中)
             </h4>
             <nav class="partials__sidebar__search">
                 <form action="{{ "search" | relURL }}" class="partials__sidebar__search__form">
@@ -11,29 +11,6 @@
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
-            </nav>
-        </div>
-
-        <div class="partials__sidebar__card">
-            <h3 class="partials__sidebar__title">
-                プロフィール
-            </h3>
-            <nav class="partials__sidebar__profile">
-                {{ $icon := resources.Get .Site.Params.profile.icon }}
-                {{ if $icon }}
-                    {{ $icon = $icon.Fill (printf "200x200 center q%d webp" .Site.Params.imageQuality) }}
-                {{ else }}
-                    {{ $icon = resources.Get .Site.Params.dafaultNoimage }}
-                    {{ $icon = $icon.Fill (printf "200x200 center q%d webp" .Site.Params.imageQuality) }}
-                {{ end }}
-                <img src="{{ $icon.Permalink }}" alt="icon" class="partials__sidebar__profile__icon">
-                <div class="partials__sidebar__profile__name">
-                    {{ .Site.Params.profile.name }}
-                </div>
-                <div class="partials__sidebar__profile__description">
-                    {{ .Site.Params.profile.description }}
-                </div>
-                {{ partial "sns-links" (dict "link" .Site.Params.profile.link ) }}
             </nav>
         </div>
 
