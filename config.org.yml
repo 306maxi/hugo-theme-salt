@@ -84,16 +84,16 @@ params:
 
 menu:
   header:
-    - name: このサイトについて
-      url: /about
+    - name: Saltの使い方
+      url: /categories/Saltの使い方
       weight: -100
-    - name: Blog
+    - name: サンプル
       url: /categories/サンプル
       weight: -90
-    - name: Tips
+    - name: Hugo
       url: /tags/Hugo
       weight: -80
-    - name: 雑記
+    - name: Go言語
       url: /categories/Go言語
       weight: -70
   sidebar:
