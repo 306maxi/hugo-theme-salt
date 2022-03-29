@@ -59,7 +59,7 @@ module:
       target: static/js/vendor/lunr-languages/lunr.ja.js
 
 params:
-  description: このサイトはHugo用ブログテーマ「Salt」のサンプルサイトです
+  description: アウトプット置き場
   icon: image/icon.png
   images:
     - image/og_large.png
@@ -72,17 +72,6 @@ params:
   profile:
     name: ユーザー名
     description: プロフィール
-    icon: image/profile_icon.png
-    link:
-      twitter: twitter
-      instagram: instagram
-      facebook: https://www.facebook.com/facebook
-      youtube: https://www.youtube.com/user/YouTubeJapan
-      github: github
-      qiita: qiita
-      zenn: zenn
-      email: my_email@example.com
-      other: https://example.com/my_url
   publisher:
     type: Organization
     name: my_organization
@@ -95,16 +84,16 @@ params:
 
 menu:
   header:
-    - name: Saltの使い方
-      url: /categories/Saltの使い方
+    - name: このサイトについて
+      url: /about
       weight: -100
-    - name: サンプル
+    - name: Blog
       url: /categories/サンプル
       weight: -90
-    - name: Hugo
+    - name: Tips
       url: /tags/Hugo
       weight: -80
-    - name: Go言語
+    - name: 雑記
       url: /categories/Go言語
       weight: -70
   sidebar:
@@ -143,13 +132,8 @@ menu:
       weight: -90
       params:
         position: left
-    - name: プライバシーポリシー
-      url: /privacy-policy
-      weight: -100
-      params:
-        position: right
     - name: お問い合わせ
-      url: https://github.com/okdyy75/hugo-theme-salt/issues
+      url: 
       weight: -90
       params:
         position: right
