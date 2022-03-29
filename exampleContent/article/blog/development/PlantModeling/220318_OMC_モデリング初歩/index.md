@@ -7,6 +7,11 @@ categories: "Development"
 pickups: ["MBD"]
 tags:
 - OpenModelica
+share: true
+toc: true
+comment: true
+archives: ["2022年3月"]
+
 marp: true
 theme: slide_style
 size: 16:9

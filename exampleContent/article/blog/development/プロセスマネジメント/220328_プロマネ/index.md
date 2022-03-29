@@ -3,10 +3,14 @@ date: 2022-03-28
 title: "[QM] Project運用のManagement"
 linkTitle: "ProcessManagement"
 description: "QM対応として，ISO9000廃止以降のプロセスマネジメントの取り組み計画"
-categories:
-- Development
-- Management
-tags:
+categories: Management
+tags: 
+- ISO9000
+share: true
+toc: true
+comment: true
+archives: ["2022年3月"]
+
 marp: false
 theme: slide_style
 size: 16:9

@@ -8,6 +8,11 @@ pickups: ["MBD"]
 tags:
 - OpenModelica
 - 1D-CAE
+share: true
+toc: true
+comment: true
+archives: ["2022年3月"]
+
 marp: true
 theme: slide_style
 size: 16:9

@@ -10,6 +10,10 @@ tags:
 - Linux
 - WSL
 - Docker
+share: true
+toc: true
+comment: true
+archives: ["2022年3月"]
 
 marp: true
 theme: slide_style

@@ -1,5 +1,5 @@
-#baseURL: https://306maxi.github.io/hugo-theme-salt/
-baseURL: http://192.168.100.250:11080/hugo-theme-salt/
+baseURL: https://306maxi.github.io/hugo-theme-salt/
+#baseURL: http://192.168.100.250:11080/hugo-theme-salt/
 languageCode: ja
 # theme: hugo-theme-salt
 title: Hugo
