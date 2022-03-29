@@ -4,12 +4,15 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>車両1Dシミュレーション | Hugo</title>
-<meta name=description content="EMOTHモデル"><meta property="og:locale" content="ja_JP">
+<meta name=description content="EMOTHモデル"><meta name=thumbnail content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_1200x630_fill_q75_h2_box_center_3.webp"><meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="車両1Dシミュレーション | Hugo">
-<meta property="og:description" content="EMOTHモデル"><meta property="og:url" content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/">
+<meta property="og:description" content="EMOTHモデル"><meta property="og:image" content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_1200x630_fill_q75_h2_box_center_3.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630"><meta property="og:url" content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/">
 <meta property="og:site_name" content="Hugo">
 <meta property="og:type" content="article"><meta property="article:published_time" content="2022-03-18T00:00:00+00:00"><meta property="article:modified_time" content="2022-03-18T00:00:00+00:00"><meta property="article:author" content="okdyy75"><meta property="article:section" content="Development"><meta property="article:tag" content="OpenModelica"><meta property="article:tag" content="1D-CAE"><meta name=twitter:title content="車両1Dシミュレーション | Hugo">
-<meta name=twitter:description content="EMOTHモデル"><meta name=robots content="index,follow">
+<meta name=twitter:description content="EMOTHモデル"><meta name=twitter:image content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_1200x630_fill_q75_h2_box_center_3.webp">
+<meta name=twitter:card content="summary_large_image"><meta name=robots content="index,follow">
 <meta name=googlebot content="index,follow">
 <meta name=generator content="Hugo 0.89.4">
 <link rel=icon href=https://306maxi.github.io/hugo-theme-salt/favicon.ico>
@@ -24,7 +27,7 @@
 <link rel=stylesheet href=/css/vendor/@fortawesome/fontawesome-free/css/all.min.css media=print onload="this.media='all'">
 <link rel=preload href=/css/vendor/github-markdown-css/github-markdown.css as=style>
 <link rel=stylesheet href=/css/vendor/github-markdown-css/github-markdown.css media=print onload="this.media='all'">
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://306maxi.github.io/hugo-theme-salt/#website","name":"Hugo","url":"https://306maxi.github.io/hugo-theme-salt/","potentialAction":{"@type":"SearchAction","target":"https://306maxi.github.io/hugo-theme-salt/search/?query={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"}},{"@type":"Article","headline":"車両1Dシミュレーション","description":":memo:車両の1DシミュレーションをModelicaで動かしてみる 概要 モータとバッテリの熱量と温度 NEDCサイクルでパターン運転する電動車両コンポーネントから損失による熱量を熱容量に接続して温度をプロットする モータモデルの方には雰囲気温度(25[degC]固定)への熱交換(放熱)を付加しているので，NEDCサイクルごとに温度は上昇，降下を繰り返しサチュレーションする様子が見て取れる． 対して，バ","keywords":["OpenModelica","1D-CAE"],"author":{"@type":"Person","url":"https://github.com/okdyy75","name":"okdyy75"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"},"datePublished":"2022-03-18T00:00:00+00:00","dateModified":"2022-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"},"isPartOf":{"@id":"https://306maxi.github.io/hugo-theme-salt/#website"},"breadcrumb":{"@id":"https://306maxi.github.io/hugo-theme-salt/#breadcrumb"}},{"@type":"Organization","@id":"https://306maxi.github.io/hugo-theme-salt/#publisher","name":"okdyy75","url":"https://github.com/okdyy75","sameAs":["https://twitter.com/okdyy75"],"logo":{"@type":"ImageObject","@id":"https://306maxi.github.io/hugo-theme-salt/#logo","url":"https://306maxi.github.io/hugo-theme-salt/image/icon_hufcfbdcc219ffada1cbabf236b1db3300_1050873_120x120_fit_box_3.png","width":120,"height":120},"image":{"@id":"https://306maxi.github.io/hugo-theme-salt/#logo"},"description":"Hugo用ブログテーマ「Salt」を作りました"},{"@type":"BreadcrumbList","@id":"https://306maxi.github.io/hugo-theme-salt","name":"パンくずリスト","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://306maxi.github.io/hugo-theme-salt/"},{"@type":"ListItem","position":2,"name":"Development","item":"https://306maxi.github.io/hugo-theme-salt/categories/Development"}]}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://306maxi.github.io/hugo-theme-salt/#website","name":"Hugo","url":"https://306maxi.github.io/hugo-theme-salt/","potentialAction":{"@type":"SearchAction","target":"https://306maxi.github.io/hugo-theme-salt/search/?query={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"}},{"@type":"Article","headline":"車両1Dシミュレーション","description":":memo:車両の1DシミュレーションをModelicaで動かしてみる 概要 モータとバッテリの熱量と温度 NEDCサイクルでパターン運転する電動車両コンポーネントから損失による熱量を熱容量に接続して温度をプロットする モータモデルの方には雰囲気温度(25[degC]固定)への熱交換(放熱)を付加しているので，NEDCサイクルごとに温度は上昇，降下を繰り返しサチュレーションする様子が見て取れる． 対して，バ","image":"https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_1280x720_fill_q75_h2_box_center_3.webp","keywords":["OpenModelica","1D-CAE"],"author":{"@type":"Person","url":"https://github.com/okdyy75","name":"okdyy75"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"},"datePublished":"2022-03-18T00:00:00+00:00","dateModified":"2022-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"},"isPartOf":{"@id":"https://306maxi.github.io/hugo-theme-salt/#website"},"breadcrumb":{"@id":"https://306maxi.github.io/hugo-theme-salt/#breadcrumb"}},{"@type":"Organization","@id":"https://306maxi.github.io/hugo-theme-salt/#publisher","name":"okdyy75","url":"https://github.com/okdyy75","sameAs":["https://twitter.com/okdyy75"],"logo":{"@type":"ImageObject","@id":"https://306maxi.github.io/hugo-theme-salt/#logo","url":"https://306maxi.github.io/hugo-theme-salt/image/icon_hufcfbdcc219ffada1cbabf236b1db3300_1050873_120x120_fit_box_3.png","width":120,"height":120},"image":{"@id":"https://306maxi.github.io/hugo-theme-salt/#logo"},"description":"Hugo用ブログテーマ「Salt」を作りました"},{"@type":"BreadcrumbList","@id":"https://306maxi.github.io/hugo-theme-salt","name":"パンくずリスト","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://306maxi.github.io/hugo-theme-salt/"},{"@type":"ListItem","position":2,"name":"Development","item":"https://306maxi.github.io/hugo-theme-salt/categories/Development"}]}]}</script>
 </head>
 <body class=body>
 <div class=container>
@@ -181,6 +184,7 @@ shortcode
 </a>
 </li>
 </ul>
+<img src=/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_640x640_fit_q75_h2_box_3.webp alt=車両1Dシミュレーション class=single__article__thumbnail>
 <div class="single__article__content markdown-body">
 <h1 id=---fit----memo車両の1dシミュレーションをmodelicaで動かしてみる> :memo:車両の1DシミュレーションをModelicaで動かしてみる</h1>
 <p><img src=2022-03-18-17-56-44.png alt="bg blur:10px"></p>
@@ -223,7 +227,7 @@ shortcode
 <article class=partials__relatedArticle>
 <div class=partials__relatedArticle__inner>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_OMC_%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E5%88%9D%E6%AD%A9/ class=partials__relatedArticle__link></a>
-<img src=https://306maxi.github.io/hugo-theme-salt/image/default_noimage_hu6fe3b5ac74af77aa92279c364bc8fc3f_5361_576x324_fill_q75_h2_box_center_3.webp alt=Modelicaのサンプルモデルを使ってみるための手順 loading=lazy class=partials__relatedArticle__thumbnail>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_OMC_%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E5%88%9D%E6%AD%A9/thumbnail_hubeb76f0c058c73e045a346b6d3116493_29942_576x324_fill_q75_h2_box_center_3.webp alt=Modelicaのサンプルモデルを使ってみるための手順 loading=lazy class=partials__relatedArticle__thumbnail>
 <div class=partials__relatedArticle__content>
 <h4 class=partials__relatedArticle__title>
 Modelicaのサンプルモデルを使ってみるための手順
@@ -244,7 +248,7 @@ Modelicaのサンプルモデルを使ってみるための手順
 <article class=partials__relatedArticle>
 <div class=partials__relatedArticle__inner>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/MATLAB/220311_FMU%E3%82%92%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/ class=partials__relatedArticle__link></a>
-<img src=https://306maxi.github.io/hugo-theme-salt/image/default_noimage_hu6fe3b5ac74af77aa92279c364bc8fc3f_5361_576x324_fill_q75_h2_box_center_3.webp alt=FMUをSimulinkにインポートする手順 loading=lazy class=partials__relatedArticle__thumbnail>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/MATLAB/220311_FMU%E3%82%92%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88/thumbnail_hu4b5756d796b4256977f2dcb6eec517b5_31213_576x324_fill_q75_h2_box_center_3.webp alt=FMUをSimulinkにインポートする手順 loading=lazy class=partials__relatedArticle__thumbnail>
 <div class=partials__relatedArticle__content>
 <h4 class=partials__relatedArticle__title>
 FMUをSimulinkにインポートする手順
@@ -407,7 +411,7 @@ shortcode
 </li>
 <li class=partials__sidebar__article__item>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/ class=partials__sidebar__article__itemLink>
-<img src=https://306maxi.github.io/hugo-theme-salt/image/default_noimage_hu6fe3b5ac74af77aa92279c364bc8fc3f_5361_192x108_fill_q75_h2_box_center_3.webp alt=車両1Dシミュレーション loading=lazy class=partials__sidebar__article__itemThumbnail>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_192x108_fill_q75_h2_box_center_3.webp alt=車両1Dシミュレーション loading=lazy class=partials__sidebar__article__itemThumbnail>
 <div class=partials__sidebar__article__itemDetail>
 <div class=partials__sidebar__article__itemTitle--line3>
 車両1Dシミュレーション
@@ -417,7 +421,7 @@ shortcode
 </li>
 <li class=partials__sidebar__article__item>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_OMC_%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E5%88%9D%E6%AD%A9/ class=partials__sidebar__article__itemLink>
-<img src=https://306maxi.github.io/hugo-theme-salt/image/default_noimage_hu6fe3b5ac74af77aa92279c364bc8fc3f_5361_192x108_fill_q75_h2_box_center_3.webp alt=Modelicaのサンプルモデルを使ってみるための手順 loading=lazy class=partials__sidebar__article__itemThumbnail>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_OMC_%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E5%88%9D%E6%AD%A9/thumbnail_hubeb76f0c058c73e045a346b6d3116493_29942_192x108_fill_q75_h2_box_center_3.webp alt=Modelicaのサンプルモデルを使ってみるための手順 loading=lazy class=partials__sidebar__article__itemThumbnail>
 <div class=partials__sidebar__article__itemDetail>
 <div class=partials__sidebar__article__itemTitle--line3>
 Modelicaのサンプルモデルを使ってみるための手順
@@ -427,7 +431,7 @@ Modelicaのサンプルモデルを使ってみるための手順
 </li>
 <li class=partials__sidebar__article__item>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220311_OpenModelica/ class=partials__sidebar__article__itemLink>
-<img src=https://306maxi.github.io/hugo-theme-salt/image/default_noimage_hu6fe3b5ac74af77aa92279c364bc8fc3f_5361_192x108_fill_q75_h2_box_center_3.webp alt=OpenModlicaの導入手順 loading=lazy class=partials__sidebar__article__itemThumbnail>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220311_OpenModelica/thumbnail_hu209117604ea426557afd618215b22996_137727_192x108_fill_q75_h2_box_center_3.webp alt=OpenModlicaの導入手順 loading=lazy class=partials__sidebar__article__itemThumbnail>
 <div class=partials__sidebar__article__itemDetail>
 <div class=partials__sidebar__article__itemTitle--line3>
 OpenModlicaの導入手順
