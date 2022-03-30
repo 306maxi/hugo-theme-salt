@@ -43,3 +43,11 @@ $$
 
 結果
 ---
+
+---
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="480" height="270">
+</iframe>

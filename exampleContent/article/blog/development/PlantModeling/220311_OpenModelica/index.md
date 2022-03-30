@@ -67,3 +67,13 @@ linux64のバイナリを出力させたい
 ## 参考
 1. [OpenModelica](https://www.openmodelica.org/23-news/224-december-23-2021-openmodelica-1-18-1)
 2. [GitHub](https://github.com/OpenModelica/OpenModelica)
+
+
+---
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="480" height="270">
+</iframe>
+

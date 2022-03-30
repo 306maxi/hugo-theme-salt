@@ -64,3 +64,11 @@ BatteryManagement.VoltageCycling cycler(
     np = batteryStack.np
     ) annotation(Placement(transformation(extent = {{30, 0}, {10, 20}})));
 ```
+
+---
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="480" height="270">
+</iframe>

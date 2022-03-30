@@ -81,3 +81,11 @@ CVODE(ODE演算ライブラリ,libsundials_cvode.so.5])に依存する．これ�
 ## 参考
 1. [FMUのインポート](https://jp.mathworks.com/help/simulink/ug/work-with-fmi-in-simulink.html)
 2. [FMUブロックの実装](https://jp.mathworks.com/help/simulink/ug/implement-an-fmi-block.html)
+
+---
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="480" height="270">
+</iframe>
