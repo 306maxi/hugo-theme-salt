@@ -52,3 +52,12 @@ footer: (C)2022 PUES Corp.
 | スキルフェロー    | S,I     | S,C     | S,I     | S     | A,S       |
 | 技術本部       | S,I     | S       | S,I     | I     | (**R**),I |
 | 営業(顧客窓口)   | A,S     | -       | -       | A     | -         |
+
+---
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="533" height="300">
+</iframe>
+[Slide](slide.html)
