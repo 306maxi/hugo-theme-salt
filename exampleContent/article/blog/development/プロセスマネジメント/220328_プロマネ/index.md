@@ -58,6 +58,5 @@ footer: (C)2022 PUES Corp.
 ## スライド
 
 <iframe src="slide.html"
-            title="スライド表示" width="533" height="300">
+            title="スライド表示" width="480" height="270">
 </iframe>
-[Slide](slide.html)
