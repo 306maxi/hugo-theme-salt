@@ -1,0 +1,64 @@
+---
+date: 2022-04-25
+title: "自動運転動向(2022/04版)"
+linkTitle: "AutonomousVehicles"
+description: "地域ごとの自動運転車OEMなどの動向(2022/04版)"
+categories: "Development"
+pickups: ["AutonomousVehicle"]
+tags:
+- 自動運転
+share: true
+toc: true
+comment: true
+archives: ["2022年4月"]
+
+marp: true
+theme: slide_style
+size: 16:9
+paginate: true
+headingDivider: 2
+header: 自動運転動向(2022/04版)
+footer: (C)2022 PUES Corp.
+---
+# <!-- fit --> :memo: 自動運転車両の技術動向 | Lv2+からLv4まで
+
+<!-- _class: title -->
+
+## 国内動向
+
+- あまり注視してこなかったので，現時点であまり情報ない．
+- トヨタ(=ウーブンα)がやっとLiDAR捨てる決断をする気である，というくらいが最近のトピック．
+[トヨタ子会社ウーブン、自動運転開発に安価なカメラ採用](https://jp.reuters.com/article/toyota-wovenplanet-idJPKCN2LZ00Z)
+- おそらく各社のレベル2+...レベル3(ホンダ，日産，スバル)は地図データのある高速道路上でのみ機能する仕組み．一般道ではほぼ使えないはず．スバルが将来的にEyeSightを一般道に拡張したいという記述を見た気がする．
+[一般道の自動運転、スバルが実用化へ…歩行者・信号をＡＩが識別](https://www.yomiuri.co.jp/economy/20210920-OYT1T50259/)
+
+## 中国
+
+- いわゆるIT系ベンチャの新興御三家（NIO，XPEV，LI）ではレベル2+(NoA)はすでに実用段階(ただし，LiDAR+高精度地図によるSLAMのはず．確かNIOがMobileEyeの第4世代のローンチカスタマだったか．日産が同第3世代)
+- ほぼほぼ，テスラと同等の自律走行性能があるという評を聞く．ただしLiDAR．(ローンチ当初よく高速の壁にぶつかっていたが...最近は聞かない)
+[死亡事故続く「中国版テスラ」　NIOの車は「自動運転」できない](https://jidounten-lab.com/u_nio-autonomous-tesla)
+- 従来のOEMはまだLevel2+にちょっと手が届かない．(日系OEMの後方グループと同じ程度の立ち位置？)
+- いちおう中華枠のPoleStarもLiDAR搭載．
+
+## 北米
+
+- LiDAR+高精度地図によるジオフェンス方式で，何年も前から先行しているのはWaymo/Cruise(ホンダと提携)/Lyft(トヨタと提携)，旧Toyota Research Instituteもここ．
+- 最近，昨年(2021)の当局への各社の運行車両運行距離と事故報告のレポート見たが走行距離と停止回数の少なさはWaymoなどのロボTaxi商用サービスは十分実用域と思える．
+
+- [PureVision推進派](https://business.nikkei.com/atcl/seminar/19/00030/061100192/) 
+> LiDARは(自動車には)無用の長物だ，と[教祖さま](https://techcrunch.com/2019/04/22/anyone-relying-on-lidar-is-doomed-elon-musk-says/)の論．
+
+- インテル子会社なのでこの枠に．MobileEyeの商用レベル4タクシーは2021/12月時点で[欧州の許認可待ち](https://www.calcalistech.com/ctechnews/article/rjx3jpgec)．(車両はNIOがベース)
+MobileEyeとレンタカー会社の合弁でサブブランド化する様子 : [Moovit AV Mobility Service Robotaxi](https://www.youtube.com/watch?v=EKo18TJ5JCE)
+正確なシステム情報を得ていないが，MobileEyeの通常のVisionベースに加えてLiDARを搭載しているように見える．(もともとNIOのes8は量産車にもLiDAR搭載だったと思う)
+
+## 欧州
+
+- OEMの動きに特筆すべきところは無いと思うが，[ドイツがレベル4の公道走行を許可する法案](https://jidounten-lab.com/u_germany-autonomous-law)を通しているので，世界で唯一の一般走行環境での試験場となる可能性が高い．
+
+## 所感
+
+レベル4の商用TAXIサービスは一定のゴールが見えている様に思う．
+対して，一般ドライバに代わる自動運転は現在の方式の延長線上に無いという考えに賛同する．
+
+※ 参照元情報は別途(内容に誤りあれば都度修正)
