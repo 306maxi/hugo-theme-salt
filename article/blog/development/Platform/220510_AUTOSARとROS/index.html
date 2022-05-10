@@ -4,12 +4,15 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>AUTOSARとROSそれぞれの特徴 | Hugo</title>
-<meta name=description content="制御コントローラのプラットフォームとしてAUTOSARとROSの比較"><meta property="og:locale" content="ja_JP">
+<meta name=description content="制御コントローラのプラットフォームとしてAUTOSARとROSの比較"><meta name=thumbnail content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/thumbnail_hu8319e476498bd3a8c582c20153ee8459_80576_1200x630_fill_q75_h2_box_center_3.webp"><meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="AUTOSARとROSそれぞれの特徴 | Hugo">
-<meta property="og:description" content="制御コントローラのプラットフォームとしてAUTOSARとROSの比較"><meta property="og:url" content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/">
+<meta property="og:description" content="制御コントローラのプラットフォームとしてAUTOSARとROSの比較"><meta property="og:image" content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/thumbnail_hu8319e476498bd3a8c582c20153ee8459_80576_1200x630_fill_q75_h2_box_center_3.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630"><meta property="og:url" content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/">
 <meta property="og:site_name" content="Hugo">
 <meta property="og:type" content="article"><meta property="article:published_time" content="2022-05-10T00:00:00+00:00"><meta property="article:modified_time" content="2022-05-10T00:00:00+00:00"><meta property="article:author" content="okdyy75"><meta property="article:section" content="Development"><meta property="article:tag" content="AUTOSAR CP"><meta property="article:tag" content="AUTOSAR AP"><meta property="article:tag" content="ROS"><meta name=twitter:title content="AUTOSARとROSそれぞれの特徴 | Hugo">
-<meta name=twitter:description content="制御コントローラのプラットフォームとしてAUTOSARとROSの比較"><meta name=robots content="index,follow">
+<meta name=twitter:description content="制御コントローラのプラットフォームとしてAUTOSARとROSの比較"><meta name=twitter:image content="https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/thumbnail_hu8319e476498bd3a8c582c20153ee8459_80576_1200x630_fill_q75_h2_box_center_3.webp">
+<meta name=twitter:card content="summary_large_image"><meta name=robots content="index,follow">
 <meta name=googlebot content="index,follow">
 <meta name=generator content="Hugo 0.89.4">
 <link rel=icon href=https://306maxi.github.io/hugo-theme-salt/favicon.ico>
@@ -24,7 +27,7 @@
 <link rel=stylesheet href=/css/vendor/@fortawesome/fontawesome-free/css/all.min.css media=print onload="this.media='all'">
 <link rel=preload href=/css/vendor/github-markdown-css/github-markdown.css as=style>
 <link rel=stylesheet href=/css/vendor/github-markdown-css/github-markdown.css media=print onload="this.media='all'">
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://306maxi.github.io/hugo-theme-salt/#website","name":"Hugo","url":"https://306maxi.github.io/hugo-theme-salt/","potentialAction":{"@type":"SearchAction","target":"https://306maxi.github.io/hugo-theme-salt/search/?query={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"}},{"@type":"Article","headline":"AUTOSARとROSそれぞれの特徴","description":":memo: AUTOSARとROSそれぞれの特徴 背景/目的 自律制御向けコントローラのプラットフォームとして，AUTOSARもしくはROSのどちらかの開発環境を手の内化しておきたい． 次世代のアーキテクチャおよび通信プロトコル(特にTCP/IPベース)として，サービス指向アーキテクチャ(SOA:Service Oriented Architecture)やサービス指向通信(SOME/IP: Service-Oriented MiddlewarE over IP)などが登場しており，前提とし","keywords":["AUTOSAR CP","AUTOSAR AP","ROS"],"author":{"@type":"Person","url":"https://github.com/okdyy75","name":"okdyy75"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"},"datePublished":"2022-05-10T00:00:00+00:00","dateModified":"2022-05-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/"},"isPartOf":{"@id":"https://306maxi.github.io/hugo-theme-salt/#website"},"breadcrumb":{"@id":"https://306maxi.github.io/hugo-theme-salt/#breadcrumb"}},{"@type":"Organization","@id":"https://306maxi.github.io/hugo-theme-salt/#publisher","name":"okdyy75","url":"https://github.com/okdyy75","sameAs":["https://twitter.com/okdyy75"],"logo":{"@type":"ImageObject","@id":"https://306maxi.github.io/hugo-theme-salt/#logo","url":"https://306maxi.github.io/hugo-theme-salt/image/icon_hufcfbdcc219ffada1cbabf236b1db3300_1050873_120x120_fit_box_3.png","width":120,"height":120},"image":{"@id":"https://306maxi.github.io/hugo-theme-salt/#logo"},"description":"Hugo用ブログテーマ「Salt」を作りました"},{"@type":"BreadcrumbList","@id":"https://306maxi.github.io/hugo-theme-salt","name":"パンくずリスト","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://306maxi.github.io/hugo-theme-salt/"},{"@type":"ListItem","position":2,"name":"Development","item":"https://306maxi.github.io/hugo-theme-salt/categories/Development"}]}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://306maxi.github.io/hugo-theme-salt/#website","name":"Hugo","url":"https://306maxi.github.io/hugo-theme-salt/","potentialAction":{"@type":"SearchAction","target":"https://306maxi.github.io/hugo-theme-salt/search/?query={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"}},{"@type":"Article","headline":"AUTOSARとROSそれぞれの特徴","description":":memo: AUTOSARとROSそれぞれの特徴 背景/目的 AUTOSARとROS，それぞれ出自は異なるが機能的に重なる領域もあり，それぞれにメリット/デメリットがあるように思える．将来のビジネス領域をどこに置くかによってどちらを優先して取り込むべきか分かれると考える． 自律制御向けコントローラのプラットフォームとして，AUTOSARもしくはROSのどちらかの開発環境を手の内化しておきたい． 次世代のアーキテクチ","image":"https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/thumbnail_hu8319e476498bd3a8c582c20153ee8459_80576_1280x720_fill_q75_h2_box_center_3.webp","keywords":["AUTOSAR CP","AUTOSAR AP","ROS"],"author":{"@type":"Person","url":"https://github.com/okdyy75","name":"okdyy75"},"publisher":{"@id":"https://306maxi.github.io/hugo-theme-salt/#publisher"},"datePublished":"2022-05-10T00:00:00+00:00","dateModified":"2022-05-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/"},"isPartOf":{"@id":"https://306maxi.github.io/hugo-theme-salt/#website"},"breadcrumb":{"@id":"https://306maxi.github.io/hugo-theme-salt/#breadcrumb"}},{"@type":"Organization","@id":"https://306maxi.github.io/hugo-theme-salt/#publisher","name":"okdyy75","url":"https://github.com/okdyy75","sameAs":["https://twitter.com/okdyy75"],"logo":{"@type":"ImageObject","@id":"https://306maxi.github.io/hugo-theme-salt/#logo","url":"https://306maxi.github.io/hugo-theme-salt/image/icon_hufcfbdcc219ffada1cbabf236b1db3300_1050873_120x120_fit_box_3.png","width":120,"height":120},"image":{"@id":"https://306maxi.github.io/hugo-theme-salt/#logo"},"description":"Hugo用ブログテーマ「Salt」を作りました"},{"@type":"BreadcrumbList","@id":"https://306maxi.github.io/hugo-theme-salt","name":"パンくずリスト","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://306maxi.github.io/hugo-theme-salt/"},{"@type":"ListItem","position":2,"name":"Development","item":"https://306maxi.github.io/hugo-theme-salt/categories/Development"}]}]}</script>
 </head>
 <body class=body>
 <div class=container>
@@ -220,6 +223,7 @@ AUTOSARとROSそれぞれの特徴
 </a>
 </li>
 </ul>
+<img src=/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/thumbnail_hu8319e476498bd3a8c582c20153ee8459_80576_640x640_fit_q75_h2_box_3.webp alt=AUTOSARとROSそれぞれの特徴 class=single__article__thumbnail>
 <aside class=single__article__toc>
 <h3 class=single__article__toc__title><i class="fas fa-list-ul"></i>目次</h3>
 <nav id=TableOfContents>
@@ -236,6 +240,7 @@ AUTOSARとROSそれぞれの特徴
 <h1 id=---fit----memo-autosarとrosそれぞれの特徴> :memo: AUTOSARとROSそれぞれの特徴</h1>
 <h2 id=背景目的>背景/目的</h2>
 <ul>
+<li>AUTOSARとROS，それぞれ出自は異なるが機能的に重なる領域もあり，それぞれにメリット/デメリットがあるように思える．将来のビジネス領域をどこに置くかによってどちらを優先して取り込むべきか分かれると考える．</li>
 <li>自律制御向けコントローラのプラットフォームとして，AUTOSARもしくはROSのどちらかの開発環境を手の内化しておきたい．</li>
 <li>次世代のアーキテクチャおよび通信プロトコル(特にTCP/IPベース)として，サービス指向アーキテクチャ(SOA:Service Oriented Architecture)やサービス指向通信(SOME/IP: Service-Oriented MiddlewarE over IP)などが登場しており，前提としてプラットフォームベースでの開発環境が用いられる．</li>
 <li>アーキテクチャ内の構成の整合性をツールで実装することが主流となってきており，MATLABがAUTOSARおよびROS対応のtoolboxを用意しているので動向を把握する．</li>
@@ -267,6 +272,9 @@ AUTOSARとROSそれぞれの特徴
 <p>双方，IP通信をベースにアプリケーションレイヤとして定義．</p>
 <p>SOME/IPはAPの仕様．CPではデンソーなどが独自拡張している(標準に取り込まれたかどうかは不明)</p>
 <p>→ サービス指向通信として，ROSの機能概要を見ればSOME/IPのおおよその概要が理解できそう．</p>
+<blockquote>
+<p>SOME/IPとは、&ldquo;Scalable service-Oriented middlewarE over IP &ldquo;の略称です。このミドルウェアは、典型的な自動車のユースケースを想定し、少なくともワイヤフォーマットレベルではAUTOSARと互換性があるように設計されています。仕様は<a href=http://some-ip.com/>http://some-ip.com/</a>で公開されています。</p>
+</blockquote>
 <h2 id=matlab対応>MATLAB対応</h2>
 <p>AUTOSAR，ROSともにMATLAB/Simulinkがツールボックス対応をしている．(※AUTOSARはSW-CコンポーネントおよびDEM/FIUサービスの定義のみ，コンフィギュレータおよびOSそのものは別途用意必要)</p>
 <p>どちらかの環境を整備，集中することで，アプリ開発環境を統一することが期待．</p>
@@ -279,7 +287,7 @@ AUTOSARとROSそれぞれの特徴
 </div>
 </article>
 <div class=single__navigation>
-<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/news/220328_%E3%82%AB%E3%83%AB%E3%83%91%E3%82%B7%E3%83%BC%E3%81%95%E3%82%93%E4%BC%91%E9%A4%8A%E4%B8%AD/ class=single__navigation__prev>megacasts</a>
+<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/AutonomousVehicles/220425_%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E8%BB%8A%E3%81%AE%E5%8B%95%E5%90%91/ class=single__navigation__prev>AutonomousVehicles</a>
 <div class=single__navigation__center></div>
 </div>
 </section>
@@ -391,10 +399,20 @@ shortcode
 <ul class=partials__sidebar__article__items>
 <li class=partials__sidebar__article__item>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/ class=partials__sidebar__article__itemLink>
-<img src=https://306maxi.github.io/hugo-theme-salt/image/default_noimage_hu6fe3b5ac74af77aa92279c364bc8fc3f_5361_192x108_fill_q75_h2_box_center_3.webp alt=AUTOSARとROSそれぞれの特徴 loading=lazy class=partials__sidebar__article__itemThumbnail>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/thumbnail_hu8319e476498bd3a8c582c20153ee8459_80576_192x108_fill_q75_h2_box_center_3.webp alt=AUTOSARとROSそれぞれの特徴 loading=lazy class=partials__sidebar__article__itemThumbnail>
 <div class=partials__sidebar__article__itemDetail>
 <div class=partials__sidebar__article__itemTitle--line3>
 AUTOSARとROSそれぞれの特徴
+</div>
+</div>
+</a>
+</li>
+<li class=partials__sidebar__article__item>
+<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/AutonomousVehicles/220425_%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E8%BB%8A%E3%81%AE%E5%8B%95%E5%90%91/ class=partials__sidebar__article__itemLink>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/AutonomousVehicles/220425_%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E8%BB%8A%E3%81%AE%E5%8B%95%E5%90%91/thumbnail_huc138dd613885d5b735d425a0a8df2d9f_74093_192x108_fill_q75_h2_box_center_3.webp alt=自動運転動向(2022/04版) loading=lazy class=partials__sidebar__article__itemThumbnail>
+<div class=partials__sidebar__article__itemDetail>
+<div class=partials__sidebar__article__itemTitle--line3>
+自動運転動向(2022/04版)
 </div>
 </div>
 </a>
@@ -425,16 +443,6 @@ AUTOSARとROSそれぞれの特徴
 <div class=partials__sidebar__article__itemDetail>
 <div class=partials__sidebar__article__itemTitle--line3>
 車両1Dシミュレーション
-</div>
-</div>
-</a>
-</li>
-<li class=partials__sidebar__article__item>
-<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_OMC_%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E5%88%9D%E6%AD%A9/ class=partials__sidebar__article__itemLink>
-<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_OMC_%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E5%88%9D%E6%AD%A9/thumbnail_hu4fc6b64223e327ec93c5747d8e960164_70854_192x108_fill_q75_h2_box_center_3.webp alt=Modelicaのサンプルモデルを使ってみるための手順 loading=lazy class=partials__sidebar__article__itemThumbnail>
-<div class=partials__sidebar__article__itemDetail>
-<div class=partials__sidebar__article__itemTitle--line3>
-Modelicaのサンプルモデルを使ってみるための手順
 </div>
 </div>
 </a>
@@ -578,7 +586,7 @@ Hugoで一週間のPV数順の人気記事を作る方法
 Development
 </div>
 <div class=partials__sidebar__category__itemCount>
-8
+9
 </div>
 </a>
 </li>
@@ -847,6 +855,11 @@ Management
 </a>
 </li>
 <li class=partials__tagList__item>
+<a href=/hugo-theme-salt/tags/%e8%87%aa%e5%8b%95%e9%81%8b%e8%bb%a2 class=partials__tagList__itemLink>
+<i class="fas fa-tag partials__tagList__itemIcon"></i>自動運転
+</a>
+</li>
+<li class=partials__tagList__item>
 <a href=/hugo-theme-salt/tags/%e9%81%8b%e5%8b%95%e6%96%b9%e7%a8%8b%e5%bc%8f class=partials__tagList__itemLink>
 <i class="fas fa-tag partials__tagList__itemIcon"></i>運動方程式
 </a>
@@ -872,6 +885,11 @@ Management
 <li class="archive-accordion-child partials__sidebar__archive__monthItem">
 <a href=/hugo-theme-salt/archives/2022%e5%b9%b45%e6%9c%88 class=partials__sidebar__archive__monthItemLink>
 2022年5月（1）
+</a>
+</li>
+<li class="archive-accordion-child partials__sidebar__archive__monthItem">
+<a href=/hugo-theme-salt/archives/2022%e5%b9%b44%e6%9c%88 class=partials__sidebar__archive__monthItemLink>
+2022年4月（1）
 </a>
 </li>
 <li class="archive-accordion-child partials__sidebar__archive__monthItem">
