@@ -238,10 +238,11 @@ shortcode
 </ul>
 <h2 id=中国>中国</h2>
 <ul>
-<li>いわゆるIT系ベンチャの新興御三家（NIO，XPEV，LI）ではレベル2+(NoA)はすでに実用段階(ただし，LiDAR+高精度地図によるSLAMのはず．確かNIOがMobileEyeの第4世代のローンチカスタマだったか．日産が同第3世代)</li>
-<li>ほぼほぼ，テスラと同等の自律走行性能があるという評を聞く．ただしLiDAR．(ローンチ当初よく高速の壁にぶつかっていたが&mldr;最近は聞かない)
+<li>出自がIT系ベンチャー系のいわゆる新興御三家（NIO，XPEV，LI）ではレベル2+(NoA機能相当)はすでに実用段階(ただし，LiDAR+高精度地図によるSLAMのはず．確かNIOがMobileEyeの第4世代(EyeQ4)のローンチカスタマだったか．日産などが同第3世代(EyeQ3))</li>
+<li>ほぼほぼ，TeslaのAPと同等の自律走行性能があるという評を聞く．ただしLiDAR併用．(ローンチ当初よく高速の壁にぶつかっていたが&mldr;最近は聞かない)
 <a href=https://jidounten-lab.com/u_nio-autonomous-tesla>死亡事故続く「中国版テスラ」　NIOの車は「自動運転」できない</a></li>
-<li>従来のOEMはまだLevel2+にちょっと手が届かない．(日系OEMの後方グループと同じ程度の立ち位置？)</li>
+<li>従来の地場OEMはまだLevel2+にちょっと手が届かないくらいの認識．(日系OEMの後方グループと同じ程度の立ち位置？)</li>
+<li>XpengはTeslaと同じく，<a href=https://36kr.jp/127838/>自動運転用MPU(SoC)を自前開発に着手</a></li>
 <li>いちおう中華枠のPoleStarもLiDAR搭載．</li>
 </ul>
 <h2 id=北米>北米</h2>
@@ -253,14 +254,21 @@ shortcode
 <p>最近，昨年(2021)の当局への各社の運行車両運行距離と事故報告のレポート見たが走行距離と停止回数の少なさはWaymoなどのロボTaxi商用サービスは十分実用域と思える．</p>
 </li>
 <li>
+<p>NvidiaのTegra一時の勢いに陰りが見える気がしている．(IVI系の需要はまだあると思うが，AMDが追い上げてきている様に思う)</p>
+</li>
+<li>
 <p><a href=https://business.nikkei.com/atcl/seminar/19/00030/061100192/>PureVision推進派</a></p>
+<ul>
+<li>昨年の量産車から前方衝突監視用に搭載していたレーダセンサを削除している．</li>
+<li>FSDも同等の考えに基づく．(FSD Betaは5/5時点の最新リリースでv10.12．もうまもなくシングルスタック版がリリースか)</li>
+</ul>
 </li>
 </ul>
 <blockquote>
 <p>LiDARは(自動車には)無用の長物だ，と<a href=https://techcrunch.com/2019/04/22/anyone-relying-on-lidar-is-doomed-elon-musk-says/>教祖さま</a>の論．</p>
 </blockquote>
 <ul>
-<li>インテル子会社なのでこの枠に．MobileEyeの商用レベル4タクシーは2021/12月時点で<a href=https://www.calcalistech.com/ctechnews/article/rjx3jpgec>欧州の許認可待ち</a>．(車両はNIOがベース)
+<li>インテル子会社なので北米枠に．MobileEyeの商用レベル4タクシーは2021/12月時点で<a href=https://www.calcalistech.com/ctechnews/article/rjx3jpgec>欧州の許認可待ち</a>．(車両はNIOがベース)
 MobileEyeとレンタカー会社の合弁でサブブランド化する様子 : <a href="https://www.youtube.com/watch?v=EKo18TJ5JCE">Moovit AV Mobility Service Robotaxi</a>
 正確なシステム情報を得ていないが，MobileEyeの通常のVisionベースに加えてLiDARを搭載しているように見える．(もともとNIOのes8は量産車にもLiDAR搭載だったと思う)</li>
 </ul>
@@ -269,9 +277,12 @@ MobileEyeとレンタカー会社の合弁でサブブランド化する様子 :
 <li>OEMの動きに特筆すべきところは無いと思うが，<a href=https://jidounten-lab.com/u_germany-autonomous-law>ドイツがレベル4の公道走行を許可する法案</a>を通しているので，世界で唯一の一般走行環境での試験場となる可能性が高い．</li>
 </ul>
 <h2 id=所感>所感</h2>
-<p>レベル4の商用TAXIサービスは一定のゴールが見えている様に思う．
-対して，一般ドライバに代わる自動運転は現在の方式の延長線上に無いという考えに賛同する．</p>
-<p>※ 参照元情報は別途(内容に誤りあれば都度修正)</p>
+<ul>
+<li>レベル4の商用TAXIサービスはWaymoなどODD(Operational Design Domain)限定の方式で一定のゴールが見えている様に思う．</li>
+<li>対して，一般ドライバに代わる自動運転は現在のLiDARを使った方式の延長線上に無いという考えに賛同する．ひとつの方向性としてはEnd-to-Endの機械学習になると思う．</li>
+<li>一般的に言われているLiDARの欠点は，雨や雪などの気象条件による乱反射，トンネルなどの走行での乱反射によるError，得られる点群画素の解像度の低さおよび色域情報がないためにオブジェクト認識がしにくい(具体的には標識など形状は分かるが文字を読めない)ために補完するセンサとしてカメラが必要ということ．</li>
+</ul>
+<p>※ Factの確認は公開Web記事などベース(一般メディアの記述はそれなりにバイアスや誤情報が含まれるているという前提でどうぞ)．参照元情報は別途(内容に誤りあれば都度修正)</p>
 </div>
 <div class=single__article__comment>
 </div>
@@ -279,7 +290,7 @@ MobileEyeとレンタカー会社の合弁でサブブランド化する様子 :
 <div class=single__navigation>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/news/220328_%E3%82%AB%E3%83%AB%E3%83%91%E3%82%B7%E3%83%BC%E3%81%95%E3%82%93%E4%BC%91%E9%A4%8A%E4%B8%AD/ class=single__navigation__prev>megacasts</a>
 <div class=single__navigation__center></div>
-<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/Platform/220510_AUTOSAR%E3%81%A8ROS/ class=single__navigation__next>AUTOSAR vs ROS</a>
+<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/MachineLearning/220426_%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E5%8B%95%E5%90%91/ class=single__navigation__next>MachineLearning</a>
 </div>
 </section>
 </div>
@@ -399,6 +410,16 @@ AUTOSARとROSそれぞれの特徴
 </a>
 </li>
 <li class=partials__sidebar__article__item>
+<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/MachineLearning/220426_%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E5%8B%95%E5%90%91/ class=partials__sidebar__article__itemLink>
+<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/MachineLearning/220426_%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E5%8B%95%E5%90%91/thumbnail_hu696a7e27226d922881d2c82d7184655a_81673_192x108_fill_q75_h2_box_center_3.webp alt=深層強化学習の動向(2022/04版) loading=lazy class=partials__sidebar__article__itemThumbnail>
+<div class=partials__sidebar__article__itemDetail>
+<div class=partials__sidebar__article__itemTitle--line3>
+深層強化学習の動向(2022/04版)
+</div>
+</div>
+</a>
+</li>
+<li class=partials__sidebar__article__item>
 <a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/AutonomousVehicles/220425_%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E8%BB%8A%E3%81%AE%E5%8B%95%E5%90%91/ class=partials__sidebar__article__itemLink>
 <img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/AutonomousVehicles/220425_%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E8%BB%8A%E3%81%AE%E5%8B%95%E5%90%91/thumbnail_huc138dd613885d5b735d425a0a8df2d9f_74093_192x108_fill_q75_h2_box_center_3.webp alt=自動運転動向(2022/04版) loading=lazy class=partials__sidebar__article__itemThumbnail>
 <div class=partials__sidebar__article__itemDetail>
@@ -424,16 +445,6 @@ AUTOSARとROSそれぞれの特徴
 <div class=partials__sidebar__article__itemDetail>
 <div class=partials__sidebar__article__itemTitle--line3>
 [PickUp] カルパシーさん休養中
-</div>
-</div>
-</a>
-</li>
-<li class=partials__sidebar__article__item>
-<a href=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/ class=partials__sidebar__article__itemLink>
-<img src=https://306maxi.github.io/hugo-theme-salt/article/blog/development/PlantModeling/220318_%E8%BB%8A%E4%B8%A11D%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/thumbnail_hu235d2fe9a6f49c34f29d783586933dfa_300067_192x108_fill_q75_h2_box_center_3.webp alt=車両1Dシミュレーション loading=lazy class=partials__sidebar__article__itemThumbnail>
-<div class=partials__sidebar__article__itemDetail>
-<div class=partials__sidebar__article__itemTitle--line3>
-車両1Dシミュレーション
 </div>
 </div>
 </a>
@@ -577,7 +588,7 @@ Hugoで一週間のPV数順の人気記事を作る方法
 Development
 </div>
 <div class=partials__sidebar__category__itemCount>
-9
+10
 </div>
 </a>
 </li>
@@ -836,6 +847,11 @@ Management
 </a>
 </li>
 <li class=partials__tagList__item>
+<a href=/hugo-theme-salt/tags/%e5%bc%b7%e5%8c%96%e5%ad%a6%e7%bf%92 class=partials__tagList__itemLink>
+<i class="fas fa-tag partials__tagList__itemIcon"></i>強化学習
+</a>
+</li>
+<li class=partials__tagList__item>
 <a href=/hugo-theme-salt/tags/%e6%a4%9c%e7%b4%a2 class=partials__tagList__itemLink>
 <i class="fas fa-tag partials__tagList__itemIcon"></i>検索
 </a>
@@ -843,6 +859,11 @@ Management
 <li class=partials__tagList__item>
 <a href=/hugo-theme-salt/tags/%e6%a7%8b%e6%88%90%e7%ae%a1%e7%90%86 class=partials__tagList__itemLink>
 <i class="fas fa-tag partials__tagList__itemIcon"></i>構成管理
+</a>
+</li>
+<li class=partials__tagList__item>
+<a href=/hugo-theme-salt/tags/%e6%a9%9f%e6%a2%b0%e5%ad%a6%e7%bf%92 class=partials__tagList__itemLink>
+<i class="fas fa-tag partials__tagList__itemIcon"></i>機械学習
 </a>
 </li>
 <li class=partials__tagList__item>
@@ -880,7 +901,7 @@ Management
 </li>
 <li class="archive-accordion-child partials__sidebar__archive__monthItem">
 <a href=/hugo-theme-salt/archives/2022%e5%b9%b44%e6%9c%88 class=partials__sidebar__archive__monthItemLink>
-2022年4月（1）
+2022年4月（2）
 </a>
 </li>
 <li class="archive-accordion-child partials__sidebar__archive__monthItem">
