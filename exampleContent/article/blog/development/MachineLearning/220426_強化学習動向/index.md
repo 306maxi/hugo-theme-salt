@@ -36,7 +36,11 @@ https://openai.com/dall-e-2/
 
 - 強化学習ではなく，教師なし機械学習の一種，敵対的生成ネットワーク(GAN)の応用であるが技術的発展性があると思うので紹介．正直技術的な詳細は把握できておらず，ベンチマーク的な意味合いで取り上げる．
 - 事例は上記URLから紹介動画を参照するのが良いと思うが，2021に発表のあった初代DALL・Eの進化版の理解で自然言語の意味を元に，その意味に沿った現実には存在しない画像を生成するというもの．
+
+https://cdn.openai.com/papers/dall-e-2.pdf
+
 ---
+
 ### Googleの汎用AI : PaLM(Pathways Language Model)
 
 - こちらも強化学習の話題ではない．まだ全容が公開されている訳ではなさそうだが，22/04/04に[(PaLM)Pathways Language Modelを発表](https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/)している．
@@ -83,7 +87,7 @@ Magnetic control of tokamak plasmas through deep reinforcement learning.
 ---
 - 最終的に単独走行のラップタイムに加え，トップドライバとの混合走行でも勝利したとある．しかしながら，ラインのブロックやスリップストリームの使い方など戦略面では少し単純なふるまいをした，と結論されている．
 - 所感として面白いと感じるのは，単純に予測できない人間ドライバの戦略的な走行を連続的に判断してより良い行動を取る制御を学習することができたというところ．本稿の要旨とは異なるが，現実世界で現実車両を用いた自律走行レースは行われているがまだ目立った結果を残せていないと記憶する．仮想世界でも，人間のトップドライバとエージェントが直接干渉することで得られる学習量と質がこの結果をもたらしたということだと思われ，自動運転の一般化へのアプローチへの大きなヒントとなると感じた．
-    
+
 <aside>
 💡 Wurman, P.R., Barrett, S., Kawamoto, K. *et al.*
 Outracing champion Gran Turismo drivers with deep reinforcement learning.
@@ -94,6 +98,6 @@ Outracing champion Gran Turismo drivers with deep reinforcement learning.
 
 ### カルパシーさんがしばし休養
 
-- OpenAIの創設者で現在Teslaのディープラーニング部門を統括しているAndrej Karpathy氏，Tesla自前のディープラーニング用スーパーコンピュータ郡であるDojoが稼働するまでしばらく休養，というニュース．
+- OpenAIの創設者で現在Teslaのディープラーニング部門を統括しているAndrej Karpathy氏，Tesla自前のディープラーニング用スーパーコンピュータ群であるDojoが稼働するまでしばらく休養，というニュース．
 - 断片的な情報として，同社の Full Self Driving(beta!!)のニューラルネットワークプログラム(スタックと呼ばれる)がこれまで用途ごとに個別にあったものを統合する大規模な書き換えが終わり，大規模な学習を行う準備中と聞く．大きく性能向上する見込みと例のTWTRおじさんは言っているが...
-- また，カルパシーさんが戻ってきたら同じ様な着想でOptimusに基礎教育をするらしい．
+- また，カルパシーさんが戻ってきたら同じ様な発想でOptimusに基礎教育をするらしい．
