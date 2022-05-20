@@ -223,6 +223,7 @@ shortcode
 <li><a href=#北米>北米</a></li>
 <li><a href=#欧州>欧州</a></li>
 <li><a href=#所感>所感</a></li>
+<li><a href=#スライド>スライド</a></li>
 </ul>
 </nav>
 </aside>
@@ -235,6 +236,7 @@ shortcode
 <a href=https://jp.reuters.com/article/toyota-wovenplanet-idJPKCN2LZ00Z>トヨタ子会社ウーブン、自動運転開発に安価なカメラ採用</a></li>
 <li>おそらく各社のレベル2+&mldr;レベル3(ホンダ，日産，スバル)は地図データのある高速道路上でのみ機能する仕組み．一般道ではほぼ使えないはず．スバルが将来的にEyeSightを一般道に拡張したいという記述を見た気がする．
 <a href=https://www.yomiuri.co.jp/economy/20210920-OYT1T50259/>一般道の自動運転、スバルが実用化へ…歩行者・信号をＡＩが識別</a></li>
+<li><a href=https://www.sip-adus.go.jp/rd/rddata/rd04/202.pdf>SIP第2期 自動運転技術(レベル3,4)に必要な認識技術等に関する研究 成果報告書</a></li>
 </ul>
 <h2 id=中国>中国</h2>
 <ul>
@@ -270,7 +272,7 @@ shortcode
 <ul>
 <li>インテル子会社なので北米枠に．MobileEyeの商用レベル4タクシーは2021/12月時点で<a href=https://www.calcalistech.com/ctechnews/article/rjx3jpgec>欧州の許認可待ち</a>．(車両はNIOがベース)
 MobileEyeとレンタカー会社の合弁でサブブランド化する様子 : <a href="https://www.youtube.com/watch?v=EKo18TJ5JCE">Moovit AV Mobility Service Robotaxi</a>
-正確なシステム情報を得ていないが，MobileEyeの通常のVisionベースに加えてLiDARを搭載しているように見える．(もともとNIOのes8は量産車にもLiDAR搭載だったと思う)</li>
+正確なシステム情報を得ていないが，MobileEyeの通常のVisionベースに加えてLiDARを搭載しているように見える．(<del>もともとNIOのes8は量産車にもLiDAR搭載だったと思う</del> LiDAR搭載はXpengのP5だった(Livox/DJI製))</li>
 </ul>
 <h2 id=欧州>欧州</h2>
 <ul>
@@ -279,10 +281,18 @@ MobileEyeとレンタカー会社の合弁でサブブランド化する様子 :
 <h2 id=所感>所感</h2>
 <ul>
 <li>レベル4の商用TAXIサービスはWaymoなどODD(Operational Design Domain)限定の方式で一定のゴールが見えている様に思う．</li>
-<li>対して，一般ドライバに代わる自動運転は現在のLiDARを使った方式の延長線上に無いという考えに賛同する．ひとつの方向性としてはEnd-to-Endの機械学習になると思う．</li>
-<li>一般的に言われているLiDARの欠点は，雨や雪などの気象条件による乱反射，トンネルなどの走行での乱反射によるError，得られる点群画素の解像度の低さおよび色域情報がないためにオブジェクト認識がしにくい(具体的には標識など形状は分かるが文字を読めない)ために補完するセンサとしてカメラが必要ということ．</li>
+<li>対して，一般ドライバに代わる自動運転は現在のLiDARを使った方式の延長線上に無いという考えには，現時点では下記の理由から同意する．
+<ul>
+<li>一般的に言われている<a href=https://www.livoxtech.com/jp/showcase/livox-tag>LiDARの欠点</a>は，雨や雪などの気象条件による乱反射，トンネルなどの走行での乱反射によるError，得られる点群画素の解像度の低さおよび色域情報がないためにオブジェクト認識がしにくい(具体的には標識など形状は分かるが文字を読めない)ために補完するセンサとしてカメラが必要ということ．</li>
+<li><a href=https://www.sip-adus.go.jp/rd/rddata/rd04/202.pdf>SIPの成果報告</a>によると，レンズの焦点距離が書かれていないがFHD(1920x1080)解像度で70mの距離の歩行者が48ピクセルとなるとある．これをYOLO v4アルゴリズムの画像認識で検知精度は65.2%であったとある．FHD解像度はXpeng等で搭載されているものもあるが，S/N比や暗所感度の問題から，まだ1280x800程度のCMOSを使用していることが多い．</li>
+<li>Teslaは現行HW3で撮像素子はすべて共通で，フロントは3眼で60m(視野角120度の広角)，150m，250mの光学系で対応している．</li>
+</ul>
+</li>
+<li>詳細は別の機会とするが，<a href="https://www.youtube.com/watch?v=CgeRskqNoEo">ソニーの裏面照射CMOSは撮像素子基板上にニューラルネット処理ロジックを内包</a>した素子を実用化しており，用途に応じて読み出し解像度と処理レートを可変にしている技術が面白いと思った．</li>
 </ul>
 <p>※ Factの確認は公開Web記事などベース(一般メディアの記述はそれなりにバイアスや誤情報が含まれるているという前提でどうぞ)．参照元情報は別途(内容に誤りあれば都度修正)</p>
+<h2 id=スライド>スライド</h2>
+<iframe src=slide.html title=スライド表示 width=480 height=270></iframe>
 </div>
 <div class=single__article__comment>
 </div>
