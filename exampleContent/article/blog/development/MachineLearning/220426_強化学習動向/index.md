@@ -101,3 +101,9 @@ Outracing champion Gran Turismo drivers with deep reinforcement learning.
 - OpenAIの創設者で現在Teslaのディープラーニング部門を統括しているAndrej Karpathy氏，Tesla自前のディープラーニング用スーパーコンピュータ群であるDojoが稼働するまでしばらく休養，というニュース．
 - 断片的な情報として，同社の Full Self Driving(beta!!)のニューラルネットワークプログラム(スタックと呼ばれる)がこれまで用途ごとに個別にあったものを統合する大規模な書き換えが終わり，大規模な学習を行う準備中と聞く．大きく性能向上する見込みと例のTWTRおじさんは言っているが...
 - また，カルパシーさんが戻ってきたら同じ様な発想でOptimusに基礎教育をするらしい．
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="480" height="270">
+</iframe>

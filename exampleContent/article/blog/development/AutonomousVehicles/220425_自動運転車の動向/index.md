@@ -31,6 +31,7 @@ footer: (C)2022 PUES Corp.
 [トヨタ子会社ウーブン、自動運転開発に安価なカメラ採用](https://jp.reuters.com/article/toyota-wovenplanet-idJPKCN2LZ00Z)
 - おそらく各社のレベル2+...レベル3(ホンダ，日産，スバル)は地図データのある高速道路上でのみ機能する仕組み．一般道ではほぼ使えないはず．スバルが将来的にEyeSightを一般道に拡張したいという記述を見た気がする．
 [一般道の自動運転、スバルが実用化へ…歩行者・信号をＡＩが識別](https://www.yomiuri.co.jp/economy/20210920-OYT1T50259/)
+- [SIP第2期 自動運転技術(レベル3,4)に必要な認識技術等に関する研究 成果報告書](https://www.sip-adus.go.jp/rd/rddata/rd04/202.pdf)
 
 ## 中国
 
@@ -54,7 +55,7 @@ footer: (C)2022 PUES Corp.
 
 - インテル子会社なので北米枠に．MobileEyeの商用レベル4タクシーは2021/12月時点で[欧州の許認可待ち](https://www.calcalistech.com/ctechnews/article/rjx3jpgec)．(車両はNIOがベース)
 MobileEyeとレンタカー会社の合弁でサブブランド化する様子 : [Moovit AV Mobility Service Robotaxi](https://www.youtube.com/watch?v=EKo18TJ5JCE)
-正確なシステム情報を得ていないが，MobileEyeの通常のVisionベースに加えてLiDARを搭載しているように見える．(もともとNIOのes8は量産車にもLiDAR搭載だったと思う)
+正確なシステム情報を得ていないが，MobileEyeの通常のVisionベースに加えてLiDARを搭載しているように見える．(~~もともとNIOのes8は量産車にもLiDAR搭載だったと思う~~ LiDAR搭載はXpengのP5だった(Livox/DJI製))
 
 ## 欧州
 
@@ -63,7 +64,18 @@ MobileEyeとレンタカー会社の合弁でサブブランド化する様子 :
 ## 所感
 
 - レベル4の商用TAXIサービスはWaymoなどODD(Operational Design Domain)限定の方式で一定のゴールが見えている様に思う．
-- 対して，一般ドライバに代わる自動運転は現在のLiDARを使った方式の延長線上に無いという考えに賛同する．ひとつの方向性としてはEnd-to-Endの機械学習になると思う．
-- 一般的に言われているLiDARの欠点は，雨や雪などの気象条件による乱反射，トンネルなどの走行での乱反射によるError，得られる点群画素の解像度の低さおよび色域情報がないためにオブジェクト認識がしにくい(具体的には標識など形状は分かるが文字を読めない)ために補完するセンサとしてカメラが必要ということ．
-
+- 対して，一般ドライバに代わる自動運転は現在のLiDARを使った方式の延長線上に無いという考えには，現時点では下記の理由から同意する．
+  - 一般的に言われている[LiDARの欠点](https://www.livoxtech.com/jp/showcase/livox-tag)は，雨や雪などの気象条件による乱反射，トンネルなどの走行での乱反射によるError，得られる点群画素の解像度の低さおよび色域情報がないためにオブジェクト認識がしにくい(具体的には標識など形状は分かるが文字を読めない)ために補完するセンサとしてカメラが必要ということ．
+  - [SIPの成果報告](https://www.sip-adus.go.jp/rd/rddata/rd04/202.pdf)によると，レンズの焦点距離が書かれていないがFHD(1920x1080)解像度で70mの距離の歩行者が48ピクセルとなるとある．これをYOLO v4アルゴリズムの画像認識で検知精度は65.2%であったとある．FHD解像度はXpeng等で搭載されているものもあるが，S/N比や暗所感度の問題から，まだ1280x800程度のCMOSを使用していることが多い．
+  - Teslaは現行HW3で撮像素子はすべて共通で，フロントは3眼で60m(視野角120度の広角)，150m，250mの光学系で対応している．
+- 詳細は別の機会とするが，[ソニーの裏面照射CMOSは撮像素子基板上にニューラルネット処理ロジックを内包](https://www.youtube.com/watch?v=CgeRskqNoEo)した素子を実用化しており，用途に応じて読み出し解像度と処理レートを可変にしている技術が面白いと思った．
+<!--
+https://www.sony-semicon.co.jp/technology/imaging-sensing/
+-->
 ※ Factの確認は公開Web記事などベース(一般メディアの記述はそれなりにバイアスや誤情報が含まれるているという前提でどうぞ)．参照元情報は別途(内容に誤りあれば都度修正)
+
+## スライド
+
+<iframe src="slide.html"
+            title="スライド表示" width="480" height="270">
+</iframe>
